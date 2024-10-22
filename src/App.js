@@ -38,7 +38,7 @@ function App() {
         />        
       </div>
       <div className="form-group">
-        <label>Promos (comma separated - e.g. 10,10,53.50): </label>
+        <label>Promos (comma separated with no spaces - e.g. 10,10,53.50): </label>
         <input
         type='text'
         value={promos}
@@ -55,7 +55,7 @@ function App() {
         placeholder="Enter NET amount"
         />
       </div>
-      <button className="calculate-button">Calculate Tip Out</button>
+      <button className="calculate-button" onClick={calculateTipOut}>Calculate Tip Out</button>
       {result && (
       <div className="result-card">
         <h2>Results</h2>
