@@ -1,6 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [totalSales, setTotalSales] = useState('');
+
+
 
   return (
     <div className="container">
@@ -9,6 +13,8 @@ function App() {
         <label>Total Sales: </label>
         <input
         type='number'
+        value={totalSales}
+        onChange={(e) => setTotalSales(e.target.value)}
         placeholder="Enter total sales"
         />        
       </div>
