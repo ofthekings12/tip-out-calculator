@@ -26,6 +26,16 @@ function App() {
         placeholder="Enter NET amount"
         />
       </div>
+      <button className="calculate-button">Calculate Tip Out</button>
+
+      <div className="result-card">
+        <h2>Results</h2>
+        <p>Total Sales After Promos: </p>
+        <p>Tip Out (5.75%): </p>
+        <p>Tax Adjusted Tip Out: </p>
+        <p>Amount House Owes You/Amount You Owe House</p>
+
+      </div>
     </div>
   );
 }
