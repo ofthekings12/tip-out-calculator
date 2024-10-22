@@ -76,7 +76,7 @@ function App() {
         <p>Total Sales After Promos: ${result.afterPromo}</p>
         <p>Tip Out (5.75%): ${result.tipOut}</p>
         <p>Tax Adjusted Tip Out: ${result.taxAdjustedTipOut}</p>
-        <p>{net < 0 ? 'Amount House Owes You' : 'Amount You Owe House'} : ${result.amountOwed}</p>
+        <p>{net < 0 ? 'House Owes You' : 'You Owe House'} : ${result.amountOwed}</p>
       </div>
       )}
       <footer className="footer">
