@@ -79,7 +79,7 @@ function App() {
         <p>{net < 0 ? 'House Owes You' : 'You Owe House'} : ${result.amountOwed}</p>
       </div>
       )}
-      <footer className="footer">
+      {/* <footer className="footer">
         <p>
           Made by{" "}
           <a
@@ -90,7 +90,7 @@ function App() {
             Mikko
           </a>
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
