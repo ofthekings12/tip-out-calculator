@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="container">
       <h1>Tip Out Calculator
-      <img src="https://github.com/ofthekings12/tip-out-calculator/blob/main/src/assets/Subject.png?raw=true" alt="Calculator Icon" className="title-image" />
+      {/* <img src="https://github.com/ofthekings12/tip-out-calculator/blob/main/src/assets/Subject.png?raw=true" alt="Calculator Icon" className="title-image" /> */}
       </h1>
 
       <div className="form-group">
