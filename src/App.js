@@ -3,7 +3,8 @@ import "./App.css";
 
 function App() {
   const [totalSales, setTotalSales] = useState('');
-
+  const [promos, setPromos] = useState('');
+  const [net, setNet] = useState('');
 
 
   return (
@@ -22,6 +23,8 @@ function App() {
         <label>Promos (comma separated - e.g. 10,10,53.50): </label>
         <input
         type='text'
+        value={promos}
+        onChange={(e) => setPromos(e.target.value)}
         placeholder="Enter promo amounts"
         />
       </div>
@@ -29,6 +32,8 @@ function App() {
         <label>Net Amount: </label>
         <input
         type='number'
+        value={net}
+        onChange={(e) => setNet(e.target.value)}
         placeholder="Enter NET amount"
         />
       </div>
