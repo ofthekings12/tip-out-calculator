@@ -5,7 +5,25 @@ function App() {
   const [totalSales, setTotalSales] = useState('');
   const [promos, setPromos] = useState('');
   const [net, setNet] = useState('');
+  const [result, setResult] = useState(null);
 
+  const calculateTipOut = () => {
+    const sales = parseFloat(totalSales) || 0;
+    const promoTotal = promos.split(',').reduce((acc, promo) => acc + parseFloat(promo || 0), 0); //takes comma separated promo totals and sums them
+    const netAmount = parseFloat(net) || 0; // parse float takes value from input field and converts from string to integer
+
+    const afterPromo = sales - promoTotal;
+    const tipOut = (afterPromo * 0.0575).toFixed(2); // change tipout percentage here if necessary
+    const taxAdjustedTipOut = (tipOut * 0.885).toFixed(2) // this calculates tipout by reverse tax (0.885) - change this value if necessary
+    const amountOwed = netAmount < 0 ? (Math.abs(netAmount) - taxAdjustedTipOut).toFixed(2) : (Math.abs(netAmount) + parseFloat(taxAdjustedTipOut)).toFixed(2); // checks if net is positive or negative value and calculates whether house or server owes money
+
+    setResult({
+      afterPromo,
+      tipOut,
+      taxAdjustedTipOut,
+      amountOwed,
+    })
+  };
 
   return (
     <div className="container">
@@ -38,15 +56,16 @@ function App() {
         />
       </div>
       <button className="calculate-button">Calculate Tip Out</button>
-
+      {result && (
       <div className="result-card">
         <h2>Results</h2>
-        <p>Total Sales After Promos: </p>
-        <p>Tip Out (5.75%): </p>
-        <p>Tax Adjusted Tip Out: </p>
-        <p>Amount House Owes You/Amount You Owe House</p>
+        <p>Total Sales After Promos: ${result.afterPromo}</p>
+        <p>Tip Out (5.75%): ${result.tipOut} </p>
+        <p>Tax Adjusted Tip Out: ${result.taxAdjustedTipOut}</p>
+        <p>{net < 0 ? 'Amount House Owes You' : 'Amount You Owe House'} : ${result.amountOwed}</p>
 
       </div>
+      )}
     </div>
   );
 }
