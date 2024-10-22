@@ -1,6 +1,146 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+:root {
+  --primary-color: #5267DF;
+  --secondary-color: #1B1F3B; /* Dark color for text and headings */
+  --background-color: #F4F6FF; /* Light background for sections */
+  --card-background: #fff; /* White card-like sections */
+  --text-light: #8C90A5; /* Light gray for secondary text */
+  --font-family: 'Poppins', sans-serif; /* Modern font */
+  --border-radius: 10px; /* Rounded corners */
+  --transition-speed: 0.3s ease-in-out; /* Smooth transition */
 }
 
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 16px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* Container for Consistent Layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 20px; /* Spacing between input fields */
+}
+
+/* Card Style for Result Display */
+.result-card {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Modern shadow effect */
+}
+
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #4057b8; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs: Clean with Focus State */
+input, select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+input:focus, select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(82, 103, 223, 0.3);
+  outline: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 20px; /* Adjusted padding for smaller screens */
+  }
+
+  button {
+    padding: 10px 16px;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: 40px; /* Spacing above */
+  text-align: center; /* Center the text */
+  font-size: 1rem; /* Font size for the footer */
+  color: var(--text-light); /* Use light text color */
+}
+
+.footer a {
+  color: var(--primary-color); /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: color var(--transition-speed); /* Smooth color transition */
+}
+
+.footer a:hover {
+  color: #4057b8; /* Darker blue on hover */
+}
