@@ -1,16 +1,16 @@
 
 :root {
   --primary-color: #5267DF;
-  --secondary-color: #1B1F3B; /* Dark color for text and headings */
-  --background-color: #F4F6FF; /* Light background for sections */
-  --card-background: #fff; /* White card-like sections */
-  --text-light: #8C90A5; /* Light gray for secondary text */
-  --font-family: 'Poppins', sans-serif; /* Modern font */
-  --border-radius: 10px; /* Rounded corners */
-  --transition-speed: 0.3s ease-in-out; /* Smooth transition */
+  --secondary-color: #1B1F3B;
+  --background-color: #F4F6FF; 
+  --card-background: #fff;
+  --text-light: #8C90A5; 
+  --font-family: 'Poppins', sans-serif; 
+  --border-radius: 10px; 
+  --transition-speed: 0.3s ease-in-out; 
 }
 
-/* Global Styles */
+
 body {
   font-family: var(--font-family);
   background-color: var(--background-color);
@@ -19,7 +19,18 @@ body {
   padding: 0;
 }
 
-/* Headings */
+.title {
+  display: flex; 
+  align-items: center; 
+}
+
+.title-image {
+  width: 75px; 
+  height: auto; 
+  margin-left: 10px;
+}
+
+
 h1, h2, h3 {
   font-family: var(--font-family);
   color: var(--secondary-color);
@@ -38,14 +49,14 @@ h2 {
   margin-top: 16px;
 }
 
-/* Paragraphs */
+
 p {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-light);
 }
 
-/* Container for Consistent Layout */
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -55,18 +66,28 @@ p {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Group Styles */
+
 .form-group {
-  margin-bottom: 20px; /* Spacing between input fields */
+  margin-bottom: 20px; 
 }
 
-/* Card Style for Result Display */
+
 .result-card {
   background-color: var(--card-background);
   border-radius: var(--border-radius);
   padding: 24px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
   margin-top: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Modern shadow effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: max-height 1s ease, opacity 1 ease; 
+}
+
+
+.slide-in {
+  max-height: 500px; /* Maximum height to allow full visibility */
+  opacity: 1; /* Make it fully visible */
 }
 
 
@@ -90,7 +111,7 @@ button:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Inputs: Clean with Focus State */
+
 input, select {
   width: 100%;
   padding: 12px;
@@ -118,7 +139,7 @@ input:focus, select:focus {
   }
 
   .container {
-    padding: 20px; /* Adjusted padding for smaller screens */
+    padding: 20px;
   }
 
   button {
@@ -128,19 +149,19 @@ input:focus, select:focus {
 
 /* Footer Styles */
 .footer {
-  margin-top: 40px; /* Spacing above */
-  text-align: center; /* Center the text */
-  font-size: 1rem; /* Font size for the footer */
-  color: var(--text-light); /* Use light text color */
+  margin-top: 40px;
+  text-align: center; 
+  font-size: 1rem; 
+  color: var(--text-light); 
 }
 
 .footer a {
-  color: var(--primary-color); /* Link color */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Bold text for emphasis */
-  transition: color var(--transition-speed); /* Smooth color transition */
+  color: var(--primary-color); 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: color var(--transition-speed);
 }
 
 .footer a:hover {
-  color: #4057b8; /* Darker blue on hover */
+  color: #4057b8; 
 }

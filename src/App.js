@@ -6,6 +6,7 @@ function App() {
   const [promos, setPromos] = useState("");
   const [net, setNet] = useState("");
   const [result, setResult] = useState(null);
+  const [showResults, setShowResults] = useState(false);
 
   const calculateTipOut = () => {
     const sales = parseFloat(totalSales) || 0;
@@ -28,11 +29,15 @@ function App() {
       taxAdjustedTipOut,
       amountOwed,
     });
+    setShowResults(true);
   };
 
   return (
     <div className="container">
-      <h1>Tip Out Calculator</h1>
+      <h1>Tip Out Calculator
+      <img src="https://github.com/ofthekings12/tip-out-calculator/blob/main/src/assets/Subject.png?raw=true" alt="Calculator Icon" className="title-image" />
+      </h1>
+
       <div className="form-group">
         <label>Total Sales:</label>
         <input
@@ -65,17 +70,14 @@ function App() {
       <button className="calculate-button" onClick={calculateTipOut}>
         Calculate Tip Out 🤑
       </button>
-      {result && (
-        <div className="result-card">
-          <h2>Results</h2>
-          <p>Total Sales After Promos: ${result.afterPromo}</p>
-          <p>Tip Out (5.75%): ${result.tipOut} </p>
-          <p>Tax Adjusted Tip Out: ${result.taxAdjustedTipOut}</p>
-          <p>
-            {net < 0 ? "Amount House Owes You" : "Amount You Owe House"} : $
-            {result.amountOwed}
-          </p>
-        </div>
+      {showResults && result && (
+        <div className="result-card slide-in">
+        <h2>Results</h2>
+        <p>Total Sales After Promos: ${result.afterPromo}</p>
+        <p>Tip Out (5.75%): ${result.tipOut}</p>
+        <p>Tax Adjusted Tip Out: ${result.taxAdjustedTipOut}</p>
+        <p>{net < 0 ? 'Amount House Owes You' : 'Amount You Owe House'} : ${result.amountOwed}</p>
+      </div>
       )}
       <footer className="footer">
         <p>
