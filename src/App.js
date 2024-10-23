@@ -49,7 +49,7 @@ function App() {
       </div>
       <div className="form-group">
         <label>
-          Promos (comma separated with no spaces - e.g. 10,10,55.20,58):
+          Promos (whole numbers or decimals comma separated with no spaces - e.g. 10,10,55.20,58.00):
         </label>
         <input
           type="text"
