@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Tip Out Calculator
+      <h1>Tip Out Calculator 💰
       {/* <img src="https://github.com/ofthekings12/tip-out-calculator/blob/main/src/assets/Subject.png?raw=true" alt="Calculator Icon" className="title-image" /> */}
       </h1>
 
@@ -76,7 +76,7 @@ function App() {
         <p>Total Sales After Promos: ${result.afterPromo}</p>
         <p>Tip Out (5.75%): ${result.tipOut}</p>
         <p>Tax Adjusted Tip Out: ${result.taxAdjustedTipOut}</p>
-        <p>{net < 0 ? 'House Owes You' : 'You Owe House'} : ${result.amountOwed}</p>
+        <p className="amount-owed"><b>{net < 0 ? 'The House Owes You' : 'You Owe The House'} : ${result.amountOwed}</b></p>
       </div>
       )}
       {/* <footer className="footer">
