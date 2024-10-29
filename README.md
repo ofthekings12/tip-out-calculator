@@ -22,7 +22,7 @@ Simple Results: The app clearly shows how much tip out is owed, and whether the 
 Responsive Design: Works well on both desktop and mobile screens for easy use at the end of a shift.
 
 ## Screenshots
-<!-- Add screenshots or links to images here if you have any -->
+![Demo of Tip Calculator](https://github.com/ofthekings12/personal-portfolio/blob/main/src/assets/tipout-gif.gif?raw=true)
 
 ### How It Works
 Enter your total sales for the shift.
