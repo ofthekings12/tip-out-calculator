@@ -5,7 +5,7 @@ This Tip Out Calculator is a simple tool that helps streamline and automate the 
 I built this project after realizing that manual calculations sometimes led to inaccurate tip outs, resulting in frustration between staff and management. The app was developed based on a step-by-step infographic created by a colleague that explained the calculation process in detail.
 
 ## Infographic
-
+![inforgraphic](https://scontent.fyyz1-2.fna.fbcdn.net/v/t39.30808-6/323900063_5770688626348598_9170142380941098373_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=QpMu409cJukQ7kNvgHHCvqU&_nc_zt=23&_nc_ht=scontent.fyyz1-2.fna&_nc_gid=A2t9c9iFqJ798O7vfFQWQGJ&oh=00_AYBVEKenTaE0bkpRLiktSfecr4vrlubetKqaahtJWxvLSg&oe=6726E0C8)
 
 ## Live Version:
 [https://kingwest-tip-calculator.netlify.app/](https://kingwest-tip-calculator.netlify.app/)
