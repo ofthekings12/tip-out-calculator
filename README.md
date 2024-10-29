@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Tip Out Calculator is a simple tool that helps streamline and automate the calculation of tip outs in the service industry. Instead of manually calculating your tip out—which can lead to mistakes due to human error—this app does the heavy lifting for you.
 
-## Available Scripts
+I built this project after realizing that manual calculations sometimes led to inaccurate tip outs, resulting in frustration between staff and management. The app was developed based on a step-by-step infographic created by a colleague that explained the calculation process in detail.
 
-In the project directory, you can run:
+## Infographic
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Version:
+[https://kingwest-tip-calculator.netlify.app/](https://kingwest-tip-calculator.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Why I Built This App
+As someone who works in the service industry, we often had to manually calculate our tip outs at the end of a shift. This process involved subtracting promo amounts from total sales, applying a tip-out percentage, adjusting for tax, and finally determining if the server owes money to the house or vice versa. Unfortunately, human error occasionally led to incorrect amounts, causing confusion or discrepancies.
 
-### `npm test`
+I built this app to solve that problem and provide a fast, accurate, and easy way to calculate tip outs, reducing mistakes and ensuring the calculations are consistent.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
+Input Sales, Promos, and Net Amount: Enter total sales, promo amounts (in a comma-separated format), and net amounts to determine your tip out.
+Automatic Tip Out Calculation: The app calculates your tip out based on the correct percentage and adjusts it for tax.
+Simple Results: The app clearly shows how much tip out is owed, and whether the server owes the house or the house owes the server.
+Responsive Design: Works well on both desktop and mobile screens for easy use at the end of a shift.
 
-### `npm run build`
+## Screenshots
+<!-- Add screenshots or links to images here if you have any -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### How It Works
+Enter your total sales for the shift.
+Input any promo amounts as a comma-separated list (e.g., 10,20,30).
+Enter the net amount (positive or negative) that indicates the current balance owed.
+Click the "Calculate Tip Out" button.
+View the results, including the adjusted total sales, tip out amount, tax-adjusted tip out, and whether you owe the house or the house owes you.
+The app automatically deducts promo amounts, calculates the tip out at 5.75%, adjusts for tax, and provides the final amount owed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How to Use the App
+Clone or download the repository to your local machine.
+Install the necessary dependencies using npm install.
+Run the app locally by typing npm start in the terminal.
+Open the app in your browser, enter the required information, and get your results instantly.
+Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**React:** The frontend framework used to build the app.
+**CSS:** Custom styles and responsive design to ensure a smooth user experience across devices.
+**JavaScript:** Core logic for calculations and user interactions.
